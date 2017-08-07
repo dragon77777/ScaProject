@@ -255,62 +255,63 @@
                         <a class="active-menu" href="index"><i class="fa fa-dashboard"></i> 边信道研究</a>
                     </li>
                     <li>
-                        <a href="file"><i class="fa fa-desktop"></i> 文件</a>
-                    </li> 
-					 
-					 <li>
-                        <a href="#"><i class="fa fa-sitemap"></i> 表格<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="chart">统计表格</a>
-                            </li>
-                            <li>
-                                <a href="morris-chart.html">Morris Chart</a>
-                            </li>
-							</ul>
-						</li>	
+                        <a href="file"><i class="fa fa-desktop"></i> 工程管理</a>
+                    </li>
 							
                     <li>
-                        <a href="tools"><i class="fa fa-qrcode"></i> 工具</a>
+                        <a href="tools"><i class="fa fa-qrcode"></i> 数据采集</a>
                     </li>
                     
                     <li>
-                        <a href="control"><i class="fa fa-table"></i> 曲线处理</a>
-                    </li>
-                    <li>
-                        <a href="asymmetric"><i class="fa fa-edit"></i> 非对称密码算法分析 </a>
-                    </li>
-
-
-                    <li>
-                        <a href="symmetric"><i class="fa fa-sitemap"></i> 对称密码算法分析<span class="fa arrow"></span></a>
+                        <a href="symmetric"><i class="fa fa-sitemap"></i> 曲线处理<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">Second Level Link</a>
+                                <a href="#">低通滤波</a>
                             </li>
                             <li>
-                                <a href="#">Second Level Link</a>
+                                <a href="#">滑动平均滤波</a>
                             </li>
                             <li>
-                                <a href="#">Second Level Link<span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
+                                 <a href="#">静态对齐</a>
+                            </li>
+                            <li>
+                                <a href="#">平均</a>
+                            </li>
+                            <li>
+                                <a href="#">压缩</a>
+                            </li>
+                            <li>
+                                 <a href="#">频谱分析</a>
+                            </li>
+                        </ul>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="symmetric"><i class="fa fa-sitemap"></i> RSA密码算法分析<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="asymmetric">RSA选择明文SPA分析</a>
+                            </li>
+                        </ul>
+                    </li>
 
-                                </ul>
 
+                    <li>
+                        <a href="symmetric"><i class="fa fa-sitemap"></i> 分组密码算法分析<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">DES-CPA攻击分析</a>
+                            </li>
+                            <li>
+                                <a href="#">AES-CPA攻击分析</a>
+                            </li>
+                            <li>
+                                 <a href="#">SM4-CPA攻击分析</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="empty.html"><i class="fa fa-fw fa-file"></i> Empty Page</a>
+                        <a href="empty.html"><i class="fa fa-fw fa-file"></i> 更多内容</a>
                     </li>
                 </ul>
 
@@ -341,8 +342,8 @@
                         <div class="panel panel-primary">
 						<div class="number">
 							<h3>
-								<h3>{{id}}</h3>
-								<small>SPA分析</small>
+								<h3>1</h3>
+                                <small><a href="file"> 工程管理</a></small>
 							</h3> 
 						</div>
 						<div class="icon">
@@ -352,14 +353,14 @@
                         </div>
 						</div>
                     </div>
-					
+
 					       <div class="col-md-3 col-sm-12 col-xs-12">
 					<div class="board">
                         <div class="panel panel-primary">
 						<div class="number">
 							<h3>
 								<h3>2</h3>
-								<small>DES-CPA攻击分析</small>
+								<small><a href="tools">数据采集</a> </small>
 							</h3> 
 						</div>
 						<div class="icon">
@@ -376,7 +377,7 @@
 						<div class="number">
 							<h3>
 								<h3>3</h3>
-								<small>AES-CPA攻击分析</small>
+                                <small><a href="control">曲线处理</a></small>
 							</h3> 
 						</div>
 						<div class="icon">
@@ -393,253 +394,31 @@
 						<div class="number">
 							<h3>
 								<h3>4</h3>
-								<small>SM4-CPA攻击分析</small>
+                                <small><a href="asymmetric">算法分析</a></small>
 							</h3> 
 						</div>
 						<div class="icon">
 						   <i class="fa fa-user fa-5x yellow"></i>
 						</div>
-		 
+
                         </div>
 						</div>
-                    </div>
-				   
-                </div>
-				     <div class="row">
-                        <div class="col-sm-6 col-xs-12">  
-                            <div class="panel panel-default chartJs">
-                                <div class="panel-heading">
-                                    <div class="card-title">
-                                        <div class="title">折线统计图</div>
-                                    </div>
-                                </div>
-                                <div class="panel-body">
-                                    <canvas id="line-chart" class="chart"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-xs-12">
-                            <div class="panel panel-default chartJs">
-                                <div class="panel-heading">
-                                    <div class="card-title">
-                                        <div class="title">条状统计图</div>
-                                    </div>
-                                </div>
-                                <div class="panel-body">
-                                    <canvas id="bar-chart" class="chart"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-				
-		<div class="row">
-			<div class="col-xs-6 col-md-3">
-				<div class="panel panel-default">
-					<div class="panel-body easypiechart-panel">
-						<h4>Profit</h4>
-						<div class="easypiechart" id="easypiechart-blue" data-percent="82" ><span class="percent">82%</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="panel panel-default">
-					<div class="panel-body easypiechart-panel">
-						<h4>Sales</h4>
-						<div class="easypiechart" id="easypiechart-orange" data-percent="55" ><span class="percent">55%</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="panel panel-default">
-					<div class="panel-body easypiechart-panel">
-						<h4>Customers</h4>
-						<div class="easypiechart" id="easypiechart-teal" data-percent="84" ><span class="percent">84%</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="panel panel-default">
-					<div class="panel-body easypiechart-panel">
-						<h4>No. of Visits</h4>
-						<div class="easypiechart" id="easypiechart-red" data-percent="46" ><span class="percent">46%</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div><!--/.row-->
-        
-			<div class="copyrights">边信道研究 <a href="http://www.cssmoban.com/" >电子科技大学-边信道攻击研究</a></div>
-		
-				<div class="row">
-				<div class="col-md-5">
-						<div class="panel panel-default">
-						<div class="panel-heading">
-							Line Chart
-						</div>
-						<div class="panel-body">
-							<div id="morris-line-chart"></div>
-						</div>						
-					</div>   
-					</div>		
-					
-						<div class="col-md-7">
-					<div class="panel panel-default">
-					<div class="panel-heading">
-                                Bar Chart Example
-                            </div>
-                            <div class="panel-body">
-                                <div id="morris-bar-chart"></div>
-                            </div>
-						
-					</div>  
-					</div>
-					
-				</div> 
-			 
-				
-				
-                <div class="row">
-                    <div class="col-md-9 col-sm-12 col-xs-12">
-                        <div class="panel panel-default">                            
-							<div class="panel-heading">
-							Area Chart
-						</div>
-						<div class="panel-body">
-							<div id="morris-area-chart"></div>
-						</div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                Donut Chart Example
-                            </div>
-                            <div class="panel-body">
-                                <div id="morris-donut-chart"></div>
-                            </div>
-                        </div>
                     </div>
 
                 </div>
-				<div class="row">
-				<div class="col-md-12">
-				
-					</div>		
-				</div> 	
-                <!-- /. ROW  -->
-
-	   
-				
-				
-				
-                <div class="row">
-                    <div class="col-md-4 col-sm-12 col-xs-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                Tasks Panel
-                            </div>
-                            <div class="panel-body">
-                                <div class="list-group">
-
-                                    <a href="#" class="list-group-item">
-                                        <span class="badge">7 minutes ago</span>
-                                        <i class="fa fa-fw fa-comment"></i> Commented on a post
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <span class="badge">16 minutes ago</span>
-                                        <i class="fa fa-fw fa-truck"></i> Order 392 shipped
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <span class="badge">36 minutes ago</span>
-                                        <i class="fa fa-fw fa-globe"></i> Invoice 653 has paid
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <span class="badge">1 hour ago</span>
-                                        <i class="fa fa-fw fa-user"></i> A new user has been added
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <span class="badge">1.23 hour ago</span>
-                                        <i class="fa fa-fw fa-user"></i> A new user has added
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <span class="badge">yesterday</span>
-                                        <i class="fa fa-fw fa-globe"></i> Saved the world
-                                    </a>
-                                </div>
-                                <div class="text-right">
-                                    <a href="#">More Tasks <i class="fa fa-arrow-circle-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                <ol class="breadcrumb">
+					  <li><a href="#">主页</a></li>
+					  <li class="active">网站使用指南</li>
+					</ol>
                     <div class="col-md-8 col-sm-12 col-xs-12">
 
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                Responsive Table Example
-                            </div> 
+                               网站使用说明和注意事项
+                            </div>
                             <div class="panel-body">
                                 <div class="table-responsive">
-                                    <table class="table table-striped table-bordered table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th>S No.</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>User Name</th>
-                                                <th>Email ID.</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>John</td>
-                                                <td>Doe</td>
-                                                <td>John15482</td>
-                                                <td>name@site.com</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Kimsila</td>
-                                                <td>Marriye</td>
-                                                <td>Kim1425</td>
-                                                <td>name@site.com</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Rossye</td>
-                                                <td>Nermal</td>
-                                                <td>Rossy1245</td>
-                                                <td>name@site.com</td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td>Richard</td>
-                                                <td>Orieal</td>
-                                                <td>Rich5685</td>
-                                                <td>name@site.com</td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td>Jacob</td>
-                                                <td>Hielsar</td>
-                                                <td>Jac4587</td>
-                                                <td>name@site.com</td>
-                                            </tr>
-                                            <tr>
-                                                <td>6</td>
-                                                <td>Wrapel</td>
-                                                <td>Dere</td>
-                                                <td>Wrap4585</td>
-                                                <td>name@site.com</td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
+                                 网站使用说明和注意事项
                                 </div>
                             </div>
                         </div>
@@ -649,7 +428,7 @@
                 <!-- /. ROW  -->
 			
 		
-				<footer><p>电子科技大学版权所有<a target="_blank" href=""></a></p>
+				<footer><p align="center">边信道研究组版权所有<a target="_blank" href=""></a></p>
 				
         
 				</footer>
