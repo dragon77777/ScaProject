@@ -95,30 +95,57 @@ def adduser():
         print s
         print e
 
-@app.route("/chart")#表单页面
-def chart():
-    return render_template('chart.html')
 
-
-@app.route("/file")#文件页面
+@app.route("/file")#工程管理页面
 def file():
-    return render_template('ui-elements.html')
+    return render_template('fileManage.html')
 
-@app.route("/tools")#工具页面
+
+@app.route("/parameter")#rsa参数管理页面
+def parameter():
+    return render_template('rsa-parameter.html')
+
+@app.route("/open-file")#打开文件页面
+def open_file():
+    return render_template('open-file.html')
+
+
+@app.route("/tools")#数据采集页面
 def tools():
-    return render_template('tab-panel.html')
+    return render_template('data-acquisition.html')
 
-@app.route("/control")#处理页面
-def control():
-    return render_template('table.html')
+@app.route("/low-pass-filter")#曲线处理页面/低通滤波
+def low_pass_filter():
+    return render_template('low-pass-filter.html')
 
-@app.route("/asymmetric")#非对称密码算法分析
-def asymmetric():
-    return render_template('form.html')
+@app.route("/move")#曲线处理页面/滑动平均滤波
+def move():
+    return render_template('moving-average-filter.html')
 
-@app.route("/symmetric")#对称密码算法分析
-def symmetric():
-    return render_template('form.html')
+@app.route("/alignment")#曲线处理页面/静态对齐
+def alignment():
+    return render_template('static-alignment.html')
+
+@app.route("/rsa-analysis")#RSA算法分析
+def rsa_analysis():
+    return render_template('rsa-analysis.html')
+
+@app.route("/des-cpa-analysis")#des-cpa密码算法分析
+def des_cpa_analysis():
+    return render_template('des-cpa-analysis.html')
+
+@app.route("/aes-cpa-analysis")#aes-cpa密码算法分析
+def aes_cpa_analysis():
+    return render_template('aes-cpa-analysis.html')
+
+@app.route("/sm4-cpa-analysis")#sm4-cpa密码算法分析
+def sm4_cpa_analysis():
+    return render_template('sm4-cpa-analysis.html')
+
+@app.route("/more")#更多内容页面
+def more():
+    return render_template('more.html')
+
 
 
 if __name__ == "__main__":

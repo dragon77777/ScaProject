@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -251,10 +251,10 @@
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 
-                     <li>
+                      <li>
                         <a class="active-menu" href="index"><i class="fa fa-dashboard"></i> 边信道研究</a>
                     </li>
-                   <li>
+                    <li>
                        <a href="#"><i class="fa fa-sitemap"></i> 工程管理<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                             <li>
@@ -333,59 +333,63 @@
 		<div id="page-wrapper">
 		  <div class="header">
                         <h1 class="page-header">
-                            曲线处理页 <small>欢迎进入 ！</small>
+                            文件操作页 <small>欢迎进入 ！</small>
                         </h1>
 						<ol class="breadcrumb">
-					  <li><a href="#">曲线处理</a></li>
-                      <li><a href="low-pass-filter">低通滤波</a></li>
-                      <li class="active">滑动平均滤波</li>
-                      <li><a href="alignment">静态对齐</a></li>
-                      <li><a href="#">平均</a></li>
-                      <li><a href="#">压缩</a></li>
-                      <li><a href="#">频谱分析</a></li>
+					  <li><a href="#">文件管理页</a></li>
+					  <li class="active">工程管理</li>
+                      <li><a href="parameter">RSA参数管理</a></li>
 					</ol>
+          </div>
 
-		</div>
             <div id="page-inner">
                        <div class="row">
                         <div class="col-xs-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <div class="card-title">
-                                       <div class="title">滑动平均滤波</div>
+                                        <div class="title">工程管理</div>
                                     </div>
                                 </div>
                                 <form action="file" method="post">
                                 <div class="panel-body">
-                                    需要进行滑动平均滤波的数据存放目录，手动选择需要进行操作的曲线条数，以及设置权重
-                                    <div class="sub-title">源文件目录</div>
+                                    在本地创建工程，后续操作流程中生成的数据及文件会保存在工程默认的目录下，如果未填参数，会默认生成一个工程，默认名称和路径
+                                    <div class="sub-title">工程路径</div>
                                     <div>
-                                        <input type="text" name="sourcedir" class="form-control" placeholder="获取打开的文件的存放路径" disabled="disabled">
+                                        <input type="text" class="form-control" placeholder="工程路径默认:C:\Users\Administrator\Desktop">
                                     </div>
-                                    <div class="sub-title">滑动平均滤波后的文件目录</div>
+                                    <div class="sub-title">工程名称</div>
                                     <div>
-                                        <input type="text" name="filterdir" class="form-control" placeholder="获取打开的文件的存放路径的同级路径新建一个曲线处理后的文件目录" disabled="disabled">
+                                        <input type="text" class="form-control" placeholder="工程名称默认:用户名+算法+时间戳+project">
                                     </div>
-                                    <div class="sub-title">Weight</div>
+                                    <div class="sub-title">智能卡号</div>
                                     <div>
-                                        <input type="text" name="weight" class="form-control" placeholder="默认：60">
+                                        <input type="text" class="form-control" placeholder="智能卡号/默认01">
                                     </div>
-                                    <div class="sub-title">曲线总条数</div>
+
+                                    <div class="sub-title">密码攻击算法</div>
                                     <div>
-                                        <input type="text" name="totalnum" class="form-control" placeholder="默认：源目录下曲线条数" disabled="disabled">
+                                        <select class="selectbox">
+                                            <optgroup label="RSA密码分析算法">
+                                                <option value="SPA">SPA算法分析</option>
+                                            </optgroup>
+                                            <optgroup label="分组算法分析">
+                                                <option value="des">des-cpa算法</option>
+                                                <option value="aes">aes-cpa算法</option>
+                                                <option value="sm4">sm4-cpa算法</option>
+                                            </optgroup>
+                                        </select>
                                     </div>
-                                    <div class="sub-title">指定处理条数</div>
-                                    <div>
-                                        <input type="text" name="processingnum" class="form-control" placeholder="默认：1" >
-                                    </div>
-                                    <br/>
-                                    <button type="submit" name="confirm" class="btn btn-default" style="background-color: #9d9d9d;margin-left:400px;" >确定</button>
-                                    <button type="submit" name="cancel" class="btn btn-default" style="background-color: #9d9d9d;margin-left:50px;" >取消</button>
+                                    <button type="submit" class="btn btn-default" style="background-color: #9d9d9d;margin-left:400px;" >确定创建</button>
+                                    <button type="submit" class="btn btn-default" style="background-color: #9d9d9d;margin-left:50px;" >取消</button>
                                 </div>
                                 </form>
                             </div>
                         </div>
                     </div>
+
+               <!-- /. ROW  -->
+
 
 				<footer><p align="center">边信道研究组版权所有<a target="_blank" href=""></a></p>
 

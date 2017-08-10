@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -254,7 +254,7 @@
                      <li>
                         <a class="active-menu" href="index"><i class="fa fa-dashboard"></i> 边信道研究</a>
                     </li>
-                   <li>
+                    <li>
                        <a href="#"><i class="fa fa-sitemap"></i> 工程管理<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                             <li>
@@ -265,9 +265,10 @@
                             </li>
                             </ul>
                     </li>
-                    <li>
+                     <li>
                         <a href="open-file"><i class="fa fa-qrcode"></i>打开文件</a>
                     </li>
+
                     <li>
                         <a href="tools"><i class="fa fa-qrcode"></i> 数据采集</a>
                     </li>
@@ -333,59 +334,70 @@
 		<div id="page-wrapper">
 		  <div class="header">
                         <h1 class="page-header">
-                            曲线处理页 <small>欢迎进入 ！</small>
+                            数据采集页 <small>欢迎进入 ！</small>
                         </h1>
 						<ol class="breadcrumb">
-					  <li><a href="#">曲线处理</a></li>
-                      <li><a href="low-pass-filter">低通滤波</a></li>
-                      <li class="active">滑动平均滤波</li>
-                      <li><a href="alignment">静态对齐</a></li>
-                      <li><a href="#">平均</a></li>
-                      <li><a href="#">压缩</a></li>
-                      <li><a href="#">频谱分析</a></li>
+					  <li><a href="#">数据采集</a></li>
+					  <li class="active">参集参数配置</li>
 					</ol>
 
 		</div>
-            <div id="page-inner">
+           <div id="page-inner">
                        <div class="row">
                         <div class="col-xs-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <div class="card-title">
-                                       <div class="title">滑动平均滤波</div>
+                                         <div class="title">数据采集</div>
                                     </div>
                                 </div>
-                                <form action="file" method="post">
+                                <form action="alignment" method="post">
                                 <div class="panel-body">
-                                    需要进行滑动平均滤波的数据存放目录，手动选择需要进行操作的曲线条数，以及设置权重
-                                    <div class="sub-title">源文件目录</div>
+                                    配置参数，进行数据采集。可以选择使用示例参数，示例参数是参考的参数。也可以自己重新配置参数
+                                    <div class="sub-title" align="center">使用示例参数</div>
+                                    <div align="center"><button type="submit" name="example" class="btn btn-default" style="background-color: #9d9d9d;">使用示例参数</button></div>
+                                    <div class="sub-title" style="display: inline-block;margin-left:100px;">工程名称</div>
+                                    <div class="sub-title" style="display: inline-block;position: relative;left: 300px">曲线格式</div>
+                                    <div class="sub-title" style="display: inline-block;position: relative;left: 600px">曲线数目</div>
                                     <div>
-                                        <input type="text" name="sourcedir" class="form-control" placeholder="获取打开的文件的存放路径" disabled="disabled">
+                                    <input type="text" name="projectname" class="btn btn-default" placeholder="默认工程路径名称/不可修改" style="margin-left:40px" disabled="disabled">
+                                    <input type="text" name="farmot" class="btn btn-default" placeholder="默认：.csv/不可修改" style="position:relative;left:180px" disabled="disabled">
+                                    <input type="text" name="mateend" class="btn btn-default" placeholder="默认：1" style="position:relative;left:350px">
                                     </div>
-                                    <div class="sub-title">滑动平均滤波后的文件目录</div>
+                                    <div class="sub-title">采集器型号</div>
                                     <div>
-                                        <input type="text" name="filterdir" class="form-control" placeholder="获取打开的文件的存放路径的同级路径新建一个曲线处理后的文件目录" disabled="disabled">
+                                        <select class="selectbox" style="display: inline-block">
+                                            <optgroup label="示波器">
+                                                <option name="osc1" value="osc1" >示波器一</option>
+                                                <option name="osc2" value="osc2" >示波器二</option>
+                                            </optgroup>
+                                            <optgroup label="采集卡">
+                                                <option name="usb1" value="usb1">采集卡一</option>
+                                                <option name="usb2" value="usb1">采集卡二</option>
+                                            </optgroup>
+                                        </select>
+                                        <select class="selectbox" style="display: inline-block">
+                                            <optgroup label="示波器">
+                                                <option name="osc1" value="osc1" >示波器一</option>
+                                                <option name="osc2" value="osc2" >示波器二</option>
+                                            </optgroup>
+                                            <optgroup label="采集卡">
+                                                <option name="usb1" value="usb1">采集卡一</option>
+                                                <option name="usb2" value="usb1">采集卡二</option>
+                                            </optgroup>
+                                        </select>
                                     </div>
-                                    <div class="sub-title">Weight</div>
                                     <div>
-                                        <input type="text" name="weight" class="form-control" placeholder="默认：60">
-                                    </div>
-                                    <div class="sub-title">曲线总条数</div>
-                                    <div>
-                                        <input type="text" name="totalnum" class="form-control" placeholder="默认：源目录下曲线条数" disabled="disabled">
-                                    </div>
-                                    <div class="sub-title">指定处理条数</div>
-                                    <div>
-                                        <input type="text" name="processingnum" class="form-control" placeholder="默认：1" >
-                                    </div>
-                                    <br/>
                                     <button type="submit" name="confirm" class="btn btn-default" style="background-color: #9d9d9d;margin-left:400px;" >确定</button>
                                     <button type="submit" name="cancel" class="btn btn-default" style="background-color: #9d9d9d;margin-left:50px;" >取消</button>
+                                    </div>
                                 </div>
                                 </form>
                             </div>
                         </div>
                     </div>
+
+
 
 				<footer><p align="center">边信道研究组版权所有<a target="_blank" href=""></a></p>
 

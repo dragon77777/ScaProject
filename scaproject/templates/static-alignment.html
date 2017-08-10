@@ -348,13 +348,61 @@
 
 		</div>
             <div id="page-inner">
-
-                <!-- /. ROW  -->
-
-
-
-                <!-- /. ROW  -->
-
+                       <div class="row">
+                        <div class="col-xs-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="card-title">
+                                        <div class="title">静态对齐</div>
+                                    </div>
+                                </div>
+                                <form action="alignment" method="post">
+                                <div class="panel-body">
+                                    需要进行静态对齐的数据存放目录，手动选择需要进行操作的曲线条数，以及设置权重
+                                    <div class="sub-title">源文件目录</div>
+                                    <div>
+                                        <input type="text" name="sourcedir" class="form-control" placeholder="获取打开的文件的存放路径" disabled="disabled">
+                                    </div>
+                                    <div class="sub-title">源文件目录下的第一条曲线</div>
+                                    <div>
+                                        <input type="text" name="firstfile" class="form-control" placeholder="获取打开的文件的存放路径中的第一条曲线路径名称" disabled="disabled">
+                                    </div>
+                                    <div class="sub-title">静态对齐后的文件目录</div>
+                                    <div>
+                                        <input type="text" name="filterdir" class="form-control" placeholder="获取打开的文件的存放路径的同级路径新建一个曲线处理后的文件目录" disabled="disabled">
+                                    </div>
+                                    <div class="sub-title" style="display: inline-block;margin-left:100px;">模板起点</div>
+                                    <div class="sub-title" style="display: inline-block;position: relative;left: 430px">模板终点</div>
+                                    <div>
+                                    <input type="text" name="temstart" class="btn btn-default" placeholder="默认：0" style="margin-left:40px">
+                                    <input type="text" name="temend" class="btn btn-default" placeholder="默认：1000" style="position:relative;left:300px">
+                                    </div>
+                                    <div class="sub-title" style="display: inline-block;margin-left:100px;">匹配范围起点</div>
+                                    <div class="sub-title" style="display: inline-block;position: relative;left: 400px">匹配范围终点</div>
+                                    <div>
+                                    <input type="text" name="matestart" class="btn btn-default" placeholder="默认：0" style="margin-left:40px">
+                                    <input type="text" name="mateend" class="btn btn-default" placeholder="默认：1000" style="position:relative;left:300px">
+                                    </div>
+                                    <div class="sub-title">Weight</div>
+                                    <div>
+                                        <input type="text" name="weight" class="form-control" placeholder="默认：60">
+                                    </div>
+                                    <div class="sub-title">曲线总条数</div>
+                                    <div>
+                                        <input type="text" name="totalnum" class="form-control" placeholder="默认：源目录下曲线条数" disabled="disabled">
+                                    </div>
+                                    <div class="sub-title">指定处理条数</div>
+                                    <div>
+                                        <input type="text" name="processingnum" class="form-control" placeholder="默认：1" >
+                                    </div>
+                                    <br/>
+                                    <button type="submit" name="confirm" class="btn btn-default" style="background-color: #9d9d9d;margin-left:400px;" >确定</button>
+                                    <button type="submit" name="cancel" class="btn btn-default" style="background-color: #9d9d9d;margin-left:50px;" >取消</button>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
 
 				<footer><p align="center">边信道研究组版权所有<a target="_blank" href=""></a></p>
 

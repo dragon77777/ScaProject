@@ -238,7 +238,7 @@
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> 设置</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
+                        <li><a href="/"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -255,7 +255,18 @@
                         <a class="active-menu" href="index"><i class="fa fa-dashboard"></i> 边信道研究</a>
                     </li>
                     <li>
-                        <a href="file"><i class="fa fa-desktop"></i> 工程管理</a>
+                       <a href="#"><i class="fa fa-sitemap"></i> 工程管理<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                            <li>
+                                <a href="file">创建工程</a>
+                            </li>
+                            <li>
+                                <a href="parameter">RSA示例参数配置</a>
+                            </li>
+                            </ul>
+                    </li>
+                    <li>
+                        <a href="open-file"><i class="fa fa-qrcode"></i>打开文件</a>
                     </li>
 							
                     <li>
@@ -263,16 +274,16 @@
                     </li>
                     
                     <li>
-                        <a href="symmetric"><i class="fa fa-sitemap"></i> 曲线处理<span class="fa arrow"></span></a>
+                        <a href=""><i class="fa fa-sitemap"></i> 曲线处理<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">低通滤波</a>
+                                <a href="low-pass-filter">低通滤波</a>
                             </li>
                             <li>
-                                <a href="#">滑动平均滤波</a>
+                                <a href="move">滑动平均滤波</a>
                             </li>
                             <li>
-                                 <a href="#">静态对齐</a>
+                                 <a href="alignment">静态对齐</a>
                             </li>
                             <li>
                                 <a href="#">平均</a>
@@ -285,33 +296,32 @@
                             </li>
                         </ul>
                     </li>
-                    </li>
                     <li>
-                        <a href="symmetric"><i class="fa fa-sitemap"></i> RSA密码算法分析<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-sitemap"></i> RSA密码算法分析<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="asymmetric">RSA选择明文SPA分析</a>
+                                <a href="rsa-analysis">RSA选择明文SPA分析</a>
                             </li>
                         </ul>
                     </li>
 
 
                     <li>
-                        <a href="symmetric"><i class="fa fa-sitemap"></i> 分组密码算法分析<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-sitemap"></i> 分组密码算法分析<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">DES-CPA攻击分析</a>
+                                <a href="des-cpa-analysis">DES-CPA攻击分析</a>
                             </li>
                             <li>
-                                <a href="#">AES-CPA攻击分析</a>
+                                <a href="aes-cpa-analysis">AES-CPA攻击分析</a>
                             </li>
                             <li>
-                                 <a href="#">SM4-CPA攻击分析</a>
+                                 <a href="sm4-cpa-analysis">SM4-CPA攻击分析</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="empty.html"><i class="fa fa-fw fa-file"></i> 更多内容</a>
+                        <a href="more"><i class="fa fa-fw fa-file"></i> 更多内容</a>
                     </li>
                 </ul>
 
@@ -327,11 +337,10 @@
                         </h1>
 						<ol class="breadcrumb">
 					  <li><a href="#">主页</a></li>
-					  <li><a href="#"></a>边信道研究</li>
-					  <li class="active">数据</li>
+					  <li class="active">软件使用流程</li>
 					</ol> 
-									
-		</div>
+
+		   </div>
             <div id="page-inner">
 
                 <!-- /. ROW  -->
@@ -377,7 +386,7 @@
 						<div class="number">
 							<h3>
 								<h3>3</h3>
-                                <small><a href="control">曲线处理</a></small>
+                                <small><a href="low-pass-filter">曲线处理</a></small>
 							</h3> 
 						</div>
 						<div class="icon">
@@ -394,7 +403,7 @@
 						<div class="number">
 							<h3>
 								<h3>4</h3>
-                                <small><a href="asymmetric">算法分析</a></small>
+                                <small><a href="rsa-analysis">算法分析</a></small>
 							</h3> 
 						</div>
 						<div class="icon">
@@ -410,20 +419,37 @@
 					  <li><a href="#">主页</a></li>
 					  <li class="active">网站使用指南</li>
 					</ol>
-                    <div class="col-md-8 col-sm-12 col-xs-12">
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                               网站使用说明和注意事项
-                            </div>
-                            <div class="panel-body">
-                                <div class="table-responsive">
-                                 网站使用说明和注意事项
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                <div class="breadcrumb">
+                      <h2 align="center">网站使用说明和注意事项</h2>
+                      <h4> 边信道攻击方法 主要集中在功耗攻击、电磁场攻击和时间攻击。其中功耗攻击是最强有力的手段之一，包括简单功耗分析攻击（SimplePower Analysis attacks,SPA）和差分功耗分析攻击（Differential　Power　Analysis　attacks,DPA），与传统密码分析学相比，这些攻击手段攻击效果显著。
+                      </h4>
+                     <h4> 边信道攻击方法 主要集中在功耗攻击、电磁场攻击和时间攻击。其中功耗攻击是最强有力的手段之一，包括简单功耗分析攻击（SimplePower Analysis attacks,SPA）和差分功耗分析攻击（Differential　Power　Analysis　attacks,DPA），与传统密码分析学相比，这些攻击手段攻击效果显著。
+                      </h4>
+                     <h4> 边信道攻击方法 主要集中在功耗攻击、电磁场攻击和时间攻击。其中功耗攻击是最强有力的手段之一，包括简单功耗分析攻击（SimplePower Analysis attacks,SPA）和差分功耗分析攻击（Differential　Power　Analysis　attacks,DPA），与传统密码分析学相比，这些攻击手段攻击效果显著。
+                      </h4>
+                     <h4> 边信道攻击方法 主要集中在功耗攻击、电磁场攻击和时间攻击。其中功耗攻击是最强有力的手段之一，包括简单功耗分析攻击（SimplePower Analysis attacks,SPA）和差分功耗分析攻击（Differential　Power　Analysis　attacks,DPA），与传统密码分析学相比，这些攻击手段攻击效果显著。
+                      </h4>
+                     <h4> 边信道攻击方法 主要集中在功耗攻击、电磁场攻击和时间攻击。其中功耗攻击是最强有力的手段之一，包括简单功耗分析攻击（SimplePower Analysis attacks,SPA）和差分功耗分析攻击（Differential　Power　Analysis　attacks,DPA），与传统密码分析学相比，这些攻击手段攻击效果显著。
+                      </h4>
+                    <h4> 边信道攻击方法 主要集中在功耗攻击、电磁场攻击和时间攻击。其中功耗攻击是最强有力的手段之一，包括简单功耗分析攻击（SimplePower Analysis attacks,SPA）和差分功耗分析攻击（Differential　Power　Analysis　attacks,DPA），与传统密码分析学相比，这些攻击手段攻击效果显著。
+                      </h4>
+                    <h4> 边信道攻击方法 主要集中在功耗攻击、电磁场攻击和时间攻击。其中功耗攻击是最强有力的手段之一，包括简单功耗分析攻击（SimplePower Analysis attacks,SPA）和差分功耗分析攻击（Differential　Power　Analysis　attacks,DPA），与传统密码分析学相比，这些攻击手段攻击效果显著。
+                      </h4>
+                    <h4> 边信道攻击方法 主要集中在功耗攻击、电磁场攻击和时间攻击。其中功耗攻击是最强有力的手段之一，包括简单功耗分析攻击（SimplePower Analysis attacks,SPA）和差分功耗分析攻击（Differential　Power　Analysis　attacks,DPA），与传统密码分析学相比，这些攻击手段攻击效果显著。
+                      </h4>
+                    <h4> 边信道攻击方法 主要集中在功耗攻击、电磁场攻击和时间攻击。其中功耗攻击是最强有力的手段之一，包括简单功耗分析攻击（SimplePower Analysis attacks,SPA）和差分功耗分析攻击（Differential　Power　Analysis　attacks,DPA），与传统密码分析学相比，这些攻击手段攻击效果显著。
+                      </h4>
+                    <h4> 边信道攻击方法 主要集中在功耗攻击、电磁场攻击和时间攻击。其中功耗攻击是最强有力的手段之一，包括简单功耗分析攻击（SimplePower Analysis attacks,SPA）和差分功耗分析攻击（Differential　Power　Analysis　attacks,DPA），与传统密码分析学相比，这些攻击手段攻击效果显著。
+                      </h4>
+                    <h4> 边信道攻击方法 主要集中在功耗攻击、电磁场攻击和时间攻击。其中功耗攻击是最强有力的手段之一，包括简单功耗分析攻击（SimplePower Analysis attacks,SPA）和差分功耗分析攻击（Differential　Power　Analysis　attacks,DPA），与传统密码分析学相比，这些攻击手段攻击效果显著。
+                      </h4>
+                    <h4> 边信道攻击方法 主要集中在功耗攻击、电磁场攻击和时间攻击。其中功耗攻击是最强有力的手段之一，包括简单功耗分析攻击（SimplePower Analysis attacks,SPA）和差分功耗分析攻击（Differential　Power　Analysis　attacks,DPA），与传统密码分析学相比，这些攻击手段攻击效果显著。
+                      </h4>
+                    <h4> 边信道攻击方法 主要集中在功耗攻击、电磁场攻击和时间攻击。其中功耗攻击是最强有力的手段之一，包括简单功耗分析攻击（SimplePower Analysis attacks,SPA）和差分功耗分析攻击（Differential　Power　Analysis　attacks,DPA），与传统密码分析学相比，这些攻击手段攻击效果显著。
+                      </h4>
+                    <h4> 边信道攻击方法 主要集中在功耗攻击、电磁场攻击和时间攻击。其中功耗攻击是最强有力的手段之一，包括简单功耗分析攻击（SimplePower Analysis attacks,SPA）和差分功耗分析攻击（Differential　Power　Analysis　attacks,DPA），与传统密码分析学相比，这些攻击手段攻击效果显著。
+                      </h4>
+                </div>
                 </div>
                 <!-- /. ROW  -->
 			

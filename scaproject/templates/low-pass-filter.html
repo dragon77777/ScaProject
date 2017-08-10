@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -251,10 +251,10 @@
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 
-                     <li>
+                      <li>
                         <a class="active-menu" href="index"><i class="fa fa-dashboard"></i> 边信道研究</a>
                     </li>
-                   <li>
+                    <li>
                        <a href="#"><i class="fa fa-sitemap"></i> 工程管理<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                             <li>
@@ -268,6 +268,7 @@
                     <li>
                         <a href="open-file"><i class="fa fa-qrcode"></i>打开文件</a>
                     </li>
+
                     <li>
                         <a href="tools"><i class="fa fa-qrcode"></i> 数据采集</a>
                     </li>
@@ -337,8 +338,8 @@
                         </h1>
 						<ol class="breadcrumb">
 					  <li><a href="#">曲线处理</a></li>
-                      <li><a href="low-pass-filter">低通滤波</a></li>
-                      <li class="active">滑动平均滤波</li>
+					  <li class="active">低通滤波</li>
+                      <li><a href="move">滑动平均滤波</a></li>
                       <li><a href="alignment">静态对齐</a></li>
                       <li><a href="#">平均</a></li>
                       <li><a href="#">压缩</a></li>
@@ -346,23 +347,23 @@
 					</ol>
 
 		</div>
-            <div id="page-inner">
+           <div id="page-inner">
                        <div class="row">
                         <div class="col-xs-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <div class="card-title">
-                                       <div class="title">滑动平均滤波</div>
+                                        <div class="title">低通滤波</div>
                                     </div>
                                 </div>
                                 <form action="file" method="post">
                                 <div class="panel-body">
-                                    需要进行滑动平均滤波的数据存放目录，手动选择需要进行操作的曲线条数，以及设置权重
+                                    需要进行低通滤波的数据存放目录，手动选择需要进行操作的曲线条数，以及设置权重
                                     <div class="sub-title">源文件目录</div>
                                     <div>
                                         <input type="text" name="sourcedir" class="form-control" placeholder="获取打开的文件的存放路径" disabled="disabled">
                                     </div>
-                                    <div class="sub-title">滑动平均滤波后的文件目录</div>
+                                    <div class="sub-title">低通滤波后的文件目录</div>
                                     <div>
                                         <input type="text" name="filterdir" class="form-control" placeholder="获取打开的文件的存放路径的同级路径新建一个曲线处理后的文件目录" disabled="disabled">
                                     </div>
