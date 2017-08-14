@@ -114,6 +114,10 @@ def open_file():
 def tools():
     return render_template('data-acquisition.html')
 
+@app.route("/waveform")#波形展示面
+def waveform():
+    return render_template('waveform.html')
+
 @app.route("/low-pass-filter")#曲线处理页面/低通滤波
 def low_pass_filter():
     return render_template('low-pass-filter.html')
@@ -126,9 +130,17 @@ def move():
 def alignment():
     return render_template('static-alignment.html')
 
-@app.route("/rsa-analysis")#RSA算法分析
+@app.route("/rsa-analysis")#RSA算法分析/单模乘切割
 def rsa_analysis():
     return render_template('rsa-analysis.html')
+
+@app.route("/feature-extraction")#RSA算法分析/特征提取
+def feature_extraction():
+    return render_template('feature-extraction.html')
+
+@app.route("/data-analysis")#RSA算法分析/结果分析
+def data_nalysis():
+    return render_template('data-analysis.html')
 
 @app.route("/des-cpa-analysis")#des-cpa密码算法分析
 def des_cpa_analysis():
@@ -145,6 +157,10 @@ def sm4_cpa_analysis():
 @app.route("/more")#更多内容页面
 def more():
     return render_template('more.html')
+
+@app.route("/data-room")#更多内容页面
+def data_room():
+    return render_template('data-room.html')
 
 
 
